@@ -41,6 +41,9 @@ namespace MemCARDuinoCommunication
             OpenedPort.DtrEnable = false;
             Thread.Sleep(2000);
 
+            //Need to Leonardo
+            OpenedPort.DtrEnable = true;
+
             //Check if this is MCino
             SendDataToPort((byte)MCinoCommands.GETID, 100);
             ReadData = ReadDataFromPort();
